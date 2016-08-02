@@ -25,6 +25,11 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.new-dancer {
+  position: absolute;
+} 
+
 .lineUp{
   top: 50%;
 }

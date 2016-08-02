@@ -44,7 +44,7 @@ $(document).ready(function() {
     for (var i = 0; i < window.dancers.length; i++) {
       var element = window.dancers[i]['$node'][0];
       $(element).css('top', '100px');
-      console.log($(element).css('left'));
+
       // $(window.dancers[i]['$node'][0]).css('top', '100px');
     //   window.dancers[i].addClass('lineUp');
     // iterating through window node and applying a lineUp class
