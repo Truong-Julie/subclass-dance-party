@@ -32,24 +32,54 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
 
-  $('.slideButton').on('click', function() {
-    window.dancers.forEach(function(item) {
-      $(item['$node'][0]).animate({
-        top: 0
-      });
-    });
-  });
+  // $('.lineUpButton').on('click', function() {
+  //   window.dancers.forEach(function(item) {
+  //     $(item['$node'][0]).animate({
+  //       top: 100
+  //     });
+  //   });
+  // });
 
   $('.lineUpButton').on('click', function() {
     for (var i = 0; i < window.dancers.length; i++) {
       var element = window.dancers[i]['$node'][0];
-      $(element).css('top', '100px');
+      // $(element).css('top', '100px');
+      $(element).animate({ top: '100px' }, 1000);
 
-      // $(window.dancers[i]['$node'][0]).css('top', '100px');
+    //   $(window.dancers[i]['$node'][0]).css('top', '100px');
     //   window.dancers[i].addClass('lineUp');
     // iterating through window node and applying a lineUp class
     // the lineupClass css, top : px
     }
+    window.dancers.forEach(function(item) {
+      console.log(i, element);
+    });
+  });
+
+  // $(document).on('mouseenter', '.dancer', function() {
+  //   console.log('hover');
+  //   $(this).toggleClass('dancer-modified');
+  // });
+  $(document).on('mouseenter mouseleave', '.dancer', function() {
+    
+    $(this).fadeIn('slow', function () {
+      console.log('hover');
+      $(this).toggleClass('dancer-modified');
+    });
+    // $(this).animate({
+
+    // });
+  });
+  $(document).on('mouseover', '.new-dancer', function() {
+    
+    // $(this).css('transform', 'rotate(180deg)');
+    $(this).addClass('.rotate');
+    console.log('rotate');
+
+    // $(window.dancers[i]['$node'][0]).css('top', '100px');
+  //   window.dancers[i].addClass('lineUp');
+  // iterating through window node and applying a lineUp class
+  // the lineupClass css, top : px
   });
 
 });

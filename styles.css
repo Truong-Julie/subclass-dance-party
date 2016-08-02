@@ -26,10 +26,22 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.dancer-modified{
+  border:20px solid blue;
+  border-radius:20px;
+  position:absolute;
+}
+
 .new-dancer {
   position: absolute;
 } 
 
 .lineUp{
   top: 50%;
+}
+
+.rotate {
+  display: inline-block;
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
 }
