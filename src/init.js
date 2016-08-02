@@ -24,28 +24,32 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
+
+  $('.slideButton').on('click', function() {
+    window.dancers.forEach(function(item) {
+      $(item['$node'][0]).animate({
+        top: 0
+      });
+    });
+  });
+
   $('.lineUpButton').on('click', function() {
     for (var i = 0; i < window.dancers.length; i++) {
-      console.log(window.dancers[i]['$node'][0]);
       var element = window.dancers[i]['$node'][0];
       $(element).css('top', '100px');
+      console.log($(element).css('left'));
       // $(window.dancers[i]['$node'][0]).css('top', '100px');
     //   window.dancers[i].addClass('lineUp');
     // iterating through window node and applying a lineUp class
     // the lineupClass css, top : px
     }
-    // $('.dancer').toggleClass('lineUp');
-
-
-
-    // $('.dancer').css('top', '55px');
   });
 
 });
