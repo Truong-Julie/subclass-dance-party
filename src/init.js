@@ -29,6 +29,20 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+  $('.lineUpButton').on('click', function() {
+    // for (var i = 0; i < window.dancers.length; i++) {
+    //   window.dancers[i].addClass('lineUp');
+    // iterating through window node and applying a lineUp class
+    // the lineupClass css, top : px
+    // }
+    // $('.dancer').toggleClass('lineUp');
+    $('.dancer').css('top', '55px');
+  });
+
 });
 
+// node.$node[0]
+
+// this.$node.css(styleSettings);

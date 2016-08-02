@@ -32,6 +32,9 @@ makeDancer.prototype.step = function() {
   // this.step();
 };
 
+makeDancer.prototype.lineUp = function () {
+  console.log(window.dancers);
+};
 
 makeDancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
