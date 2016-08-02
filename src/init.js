@@ -32,13 +32,20 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
   $('.lineUpButton').on('click', function() {
-    // for (var i = 0; i < window.dancers.length; i++) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      console.log(window.dancers[i]['$node'][0]);
+      var element = window.dancers[i]['$node'][0];
+      $(element).css('top', '100px');
+      // $(window.dancers[i]['$node'][0]).css('top', '100px');
     //   window.dancers[i].addClass('lineUp');
     // iterating through window node and applying a lineUp class
     // the lineupClass css, top : px
-    // }
+    }
     // $('.dancer').toggleClass('lineUp');
-    $('.dancer').css('top', '55px');
+
+
+
+    // $('.dancer').css('top', '55px');
   });
 
 });
